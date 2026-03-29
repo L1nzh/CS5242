@@ -1,0 +1,76 @@
+# Project Plan
+A Modular Deep Learning Framework for Lightweight Image Recognition CS5242 Group 09 Project
+
+1. Project Motivation
+Image recognition is a core computer vision task. Instead of only reproducing a standard model, our project studies how several simple plug-and-play modules can improve a lightweight baseline in a controlled and interpretable way. This makes the project suitable for a team setting: the baseline can be kept simple and reproducible, while each team member studies one concrete architectural improvement.
+
+2. Project Description
+We will build a lightweight image recognition system on the Oxford-IIIT Pet dataset. We will first implement a simple baseline, with complete data preprocessing, training, validation, testing, and evaluation. We will then add three independent modules: Module 1, Module 2, and Module 3. Each module will be tested individually and compared fairly under the same setting.
+
+3. Proposed Solution
+The project contains one baseline and three modular extensions:
+• Baseline: implement the simplest working model and full training pipeline.
+• Module 1 : study its motivation, add it to the network, and evaluate its effect.
+• Module 2 : implement a second improvement and compare it with the baseline.
+• Module 3 : implement a third module and analyze its benefit and cost.
+• Integration: compare the baseline, each single-module version, and the best combined model.
+Evaluation will include standard quantitative metrics, learning curves, and concise ablation studies. The final goal is a clear comparison showing how each module affects performance.
+
+4. Expected Deliverables
+• a reproducible baseline model and training pipeline;
+• three independently implemented improvement modules;
+• ablation results for each module and one final comparison table;
+• runnable notebook with results presentation slides.
+
+5. Project Milestones
+Week | Milestone
+--- | ---
+Week 1 | Finalize dataset, metrics, repository, and environment.
+Week 2 | Finish the baseline and the complete train/test pipeline.
+Week 3 | Complete Module 1 and Module 2 with preliminary experiments.
+Week 4 | Complete Module 3 and all ablation studies.
+Week 5 | Integrate the best model and organize figures/tables.
+Week 6 | Finalize the report, slides, and rehearsal.
+
+References, if any, can be attached as extra pages.
+
+# Team Contract / Agreement
+A Modular Deep Learning Framework for Lightweight Image Recognition
+
+6. Team Members
+Member | Name
+--- | ---
+Member 1 | Wang Jiayu(A0326769L)
+Member 2 | Tong Yicheng(A0326416H)
+Member 3 | Lin Zhenghong(A0328419X)
+Member 4 | Deng Zhiyang(A0328988B)
+
+7. Task Allocation
+Member | Assigned Responsibilities
+--- | ---
+Member 1 | Build the baseline model and the full experimental pipeline, including data loading, preprocessing, training, validation, testing, logging, model integration, and slides/presentation coordination.
+Member 2 | Take full ownership of Module 1, including motivation, implementation, debugging, ablation, experimental analysis, and report writing for this module.
+Member 3 | Take full ownership of Module 2, including motivation, implementation, debugging, ablation, experimental analysis, and report writing for this module.
+Member 4 | Take full ownership of Module 3, including motivation, implementation, debugging, ablation, experimental analysis, and report writing for this module.
+
+8. Shared Responsibilities
+To ensure balanced contribution, all members will also:
+• join planning meetings and weekly progress checks;
+• review teammates’ code and help with debugging/integration;
+• discuss experiment settings, results, and final conclusions together;
+• contribute to report revision and presentation rehearsal.
+
+9. Team Agreement
+We agree that:
+1. each member will contribute fairly and complete assigned tasks on time;
+2. risks or delays will be communicated early to the team;
+3. major design choices and final conclusions will be discussed jointly;
+4. the final report and codebase may be refined collaboratively for consistency.
+
+10. Signatures
+Name | Signature | Date
+--- | --- | ---
+WANG JIAYU | | 08 March 2026
+TONG YICHENG | | 08 March 2026
+LIN ZHENGHONG | | 08 March 2026
+DENG ZHIYANG | | 08 March 2026

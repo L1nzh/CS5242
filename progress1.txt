@@ -1,0 +1,13 @@
+Here is a summary of my current baseline approach and my strategic plan for the next iterations:
+Task-Specific Features & Progressive Modeling
+Based on my feature analysis, the pet segmentation task has two distinct challenges: capturing the global pose/shape and distinguishing the fuzzy, high-frequency boundaries (e.g., fur blending into the background). To address this, my strategy is progressive:
+Phase 1 (Current Baseline): I am starting with a binary classification approach (Foreground vs. Background) to ensure the model successfully learns the global shapes.
+Phase 2 (Next Step): I will shift to a 3-class segmentation (Foreground, Background, and Boundary Contour). This explicitly forces the network to focus on the hardest visual features—the transition areas.
+Justification for a Custom U-Net Architecture
+To maintain the flexibility needed for the transition from Phase 1 to Phase 2, I decided to build the U-Net architecture from scratch rather than relying on a rigid, pre-trained black-box model. This "hand-built" baseline gives me the architectural freedom to inject specific modules later—such as Attention Gates in the skip connections—to better capture those difficult boundary features once the 3-class task is introduced.
+Dataset Augmentation and Improvement
+Regarding dataset collection, before blindly scraping external data, my immediate approach is to heavily rely on the Albumentations pipeline. I am applying geometric transforms, blur, and RGB shifts to simulate real-world variations (e.g., varying depth-of-field and lighting). Once I evaluate the baseline's failure cases (e.g., pets camouflaged in specific environments), I will use those insights to collect highly targeted external samples that address the model's specific blind spots.
+Comprehensive Evaluation Metrics
+To accurately measure improvements, especially when dealing with the highly imbalanced "boundary" class in Phase 2, my evaluation goes beyond standard Loss. I am tracking:
+Mean IoU for overall region overlap.
+Generalized Dice Score to specifically penalize errors on minority pixels (like thin tails or edge contours), ensuring the model is truly learning the fine details.
